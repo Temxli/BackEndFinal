@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Profile</title>
+    <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">FootProNet</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.html">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="GoogleMaps.html">Our Location</a>
+                    </li>
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="login.html">Sign in</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item" id="adminDashboardLink" style="display: none;">
+                        <a class="nav-link" href="admin.html">Admin Dashboard</a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="logoutBtn">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>User Profile</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <form id="profileForm" action="/update-profile" method="POST">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name:</label>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="New Name">
+                    </div>
+                    <button type="submit" name="action" value="changeName" class="btn btn-primary">Change Name</button><br><br>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="New Email">
+                    </div>
+                    <button type="submit" name="action" value="changeEmail" class="btn btn-primary">Change Email</button><br><br>
+
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password:</label>
+                        <input type="password" id="password" name="password" class="form-control" placeholder="New Password">
+                    </div>
+                    <button type="submit" name="action" value="changePassword" class="btn btn-primary">Change Password</button><br><br>
+
+                    <div class="mb-3">
+                        <label for="note" class="form-label">Note:</label>
+                        <textarea id="note" name="note" class="form-control" rows="3" placeholder="Write a note"></textarea>
+                    </div>
+                    <button type="submit" name="action" value="changeNote" class="btn btn-primary">Change Note</button><br><br>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <div id="profileInfo">
+                    <!-- User info will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Your custom script -->
+    <script src="profile.js"></script>
+</body>
+</html>

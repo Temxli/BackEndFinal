@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Premier League Teams</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<header class="bg-success text-white p-5 text-center">
+		<h1>Premier League Teams</h1>
+	</header>
+	<nav class="bg-secondary py-3">
+		<div class="container col-md-8">
+			<div class=" text-start fs-5">
+				<a href="index.html" class="text-white mx-2">Matches</a>
+				<a href="teams.html" class="text-white mx-2">Teams</a>
+				<a href="GoogleMaps.html" class="text-white mx-2">Our Location</a>
+				<div class=" text-end" style="display:inline; float:right;">
+					<a href="authorization.html" class="text-white mx-2">Sign in</a>
+					<a href="authorization.html" class="text-white mx-2">Log in</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<main class="container mt-5 col-lg-8">
+		<div class="row" id="teamsList"></div>
+	</main>
+
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<script src="teams.js" defer></script>
+</body>
+</html>
